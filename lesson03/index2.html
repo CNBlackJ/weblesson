@@ -1,0 +1,78 @@
+<html>
+	<body>
+		<div class="FlexWrapper">
+			<div class="FlexInner FlexOne">
+				I am content in the inner Flexbox1.
+			</div>
+			<div class="FlexInner FlexTwo">
+				I am content in the inner Flexbox2.
+			</div>
+			<div class="FlexInner FlexThree">
+				I am content in the inner Flexbox3.
+			</div>
+		</div>
+
+		<div class="MainContent">
+			Here is a bunch of text up at the top. But there isn't enough content to push the footer to the bottom of the page.
+		</div>
+		<div class="Footer">
+			However. thanks to flexbox, I've been put in my palce.
+		</div>
+	</body>
+
+	<style>
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			height: 100%
+		}
+
+		body {
+			font-family: 'Oswald', sans-serif;
+			color: #ebebeb;
+			display: flex;
+			flex-direction: column;
+			min-height: 100%;
+		}
+
+		.FlexWrapper {
+			background-color: indigo;
+			display: flex;
+			height: 200px;
+			width: 100%;
+		}
+
+		.FlexInner {
+			border: 1px solid #ebebeb;
+			background-color: #34005B;
+			color: #ebebeb;
+			display: flex;
+			height: 100px;
+		}
+
+		.FlexOne {
+			flex: 1.5 0 auto;
+		}
+
+		.FlexTwo,
+		.FlexThree {
+			flex: 1 0 auto;
+		}
+		
+		.MainContent {
+			flex: 1;
+			color: #333;
+			padding: .5rem;
+		}
+
+		.Footer {
+			background-color: violet;
+			padding: .5rem;
+		}
+	</style>
+</html>
